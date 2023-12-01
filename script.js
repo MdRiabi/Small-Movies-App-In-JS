@@ -63,10 +63,11 @@ form.addEventListener('submit', (e)=>{
 
     e.preventDefault();
 
-    const searchTerm = search.ariaValueMax;
+    const searchTerm = SEARCH_API+ search.ariaValueMax;
 
     if(searchTerm && searchTerm !==''){
-        getMovies(SEARCH_API + searchTerm);
+
+        getMovies(  searchTerm);
         search.value = '';
     } else{
         window.location.reload();
